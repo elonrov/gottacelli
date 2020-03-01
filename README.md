@@ -15,4 +15,4 @@ Other fun features could include commands or cursor interaction to make the Grac
 
 # Wireframes 
 
-![](src/images/wireframes/png)
+![](src/images/wireframes.png)
