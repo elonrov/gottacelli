@@ -1,5 +1,5 @@
 {
-  "name": "js_project_skeleton",
+  "name": "gottacelli",
   "version": "1.0.0",
   "description": "skeleton for new JS project",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "webpack:watch": "webpack --watch --config webpack.dev.js",
     "webpack:build": "webpack --config webpack.prod.js  --optimize-minimize"
   },
-  "author": "mrcjbradley",
+  "author": "elonrov",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
