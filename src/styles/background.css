@@ -1,0 +1,8 @@
+#canvas-background {
+    width: 760px;
+    margin: 0 auto;
+    border: 15px solid goldenrod;
+    background-image: url("../images/background.png");
+    background-size: cover;
+}
+

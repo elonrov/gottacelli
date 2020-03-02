@@ -1,46 +1,23 @@
-// MIXINS && VARIABLES
-
-@mixin basic-box-shadow($color) {
-  box-shadow: 3px 3px 5px 5px $color, 1px 0px 1px $color;
+html {
+  min-height: 100%;
 }
-
-$main-color: green;
-$accent-color: darken($main-color, 10%);
-$background-color: lighten($main-color, 40%);
-
-// LAYOUT
 
 body {
-  background-color: $background-color;
-  color: $main-color;
-  height: 97vh;
-  width: 100vw;
-  display: flex;
+  display: flex; 
   flex-direction: column;
-}
-
-.center {
-  display: flex;
-  align-items: center;
   justify-content: center;
+  background-image: linear-gradient(#c2c2f5, #eaeaf0);
+  min-height: 100%;
+  background-repeat: none;
+  overflow: hidden;
 }
 
-// COMPONENTS
-.card {
-  background: white;
-  height: 50vh;
-  width: 50vw;
-  border-radius: 15px;
-  margin-top: 15px;
-  @include basic-box-shadow($accent-color);
-}
-
-.image-card {
-  background-image: url("../images/yoda-stitch.jpg");
-  background-position: center;
-}
-
-// TYPOGRAPHY
-h2 {
-  font-size: 3rem;
+h1 {
+  margin: 0 auto; 
+  font-family: 'MedievalSharp', ;
+  font-size: 62px; 
+  color: goldenrod;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  letter-spacing: 4px;
 }

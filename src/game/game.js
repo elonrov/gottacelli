@@ -1,8 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const canvas = document.getElementById("canvas"); 
-    canvas.width = 900; 
-    canvas.height = 600;
-    const ctx = canvas.getContext("2d");
-    ctx.fillStyle = "purple";
-    ctx.fillRect(0, 0, 500, 500);
-})
+import Cupid from './cupid';
+
+export default class Game {
+    constructor(canvas) {
+        this.ctx = canvas.getContext("2d");
+        canvas.width = 760;
+        canvas.height = 502;
+        const dimensions = { width: canvas.width, height: canvas.height};
+        
+        this.cupid = new Cupid(dimensions);
+        this.play();
+    }; 
+
+    play() {
+        this.cupid.drawCupid();
+        // this.cupid.moveCupid();
+    }
+
+}
+
+// module.exports = Game;
