@@ -1,8 +1,37 @@
 #canvas-background {
-    width: 760px;
+    width: 850px;
     margin: 0 auto;
-    border: 15px solid goldenrod;
+    align-self: center;
+    top: 125%;
     background-image: url("../images/background.png");
     background-size: cover;
+    padding-right: 5px;
+    padding-top: 8px;
+    position: absolute;
 }
 
+
+.frame {
+    position: absolute;
+    margin: 0 auto;
+    align-self: center;
+    top: 40%;
+    width: 1150px; 
+    height: auto;
+}
+
+.instructions-visible {
+    margin: 0 auto;
+    position: absolute; 
+    align-self: center;
+    top: 200%;
+    max-width: 50%;
+    z-index: 1; 
+    font-size: 30px; 
+    color: white;
+    display: block;
+}
+
+.instructions-invisible {
+    display: none;
+}
