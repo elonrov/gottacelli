@@ -4,6 +4,7 @@
 //     MAX_VEL: 8
 // }
 
+
 export default class Cupid {
     constructor(canvasWidth, canvasHeight) {
         const canvas = document.getElementById("canvas-background");
@@ -20,6 +21,8 @@ export default class Cupid {
         this.dirX = 0;
         this.dirY = 0;
 
+        this.health = 200;
+        this.score = 0;
 
         this.imgSrc = "src/images/cupid-left.png";
 
@@ -32,11 +35,6 @@ export default class Cupid {
         document.addEventListener("keydown", this.keyDownHandler, false);
         document.addEventListener("keyup", this.keyUpHandler, false);
     }
-
-    // animate(ctx) {
-    //     this.moveCupid(); 
-    //     this.drawCupid(ctx);
-    // }
 
     drawCupid(ctx) {
         const img = new Image();
@@ -64,7 +62,6 @@ export default class Cupid {
                 this.dirY = 4;
                 break;
         }
-        // this.drawCupid(this.ctx)
     };
 
     newPos() {
@@ -74,10 +71,6 @@ export default class Cupid {
     }
 
     detectBorders() {
-        //floor
-        if (this.cupidY + this.cupidHeight - 30 > this.canvasHeight) {
-            this.cupidY = this.canvasHeight - this.cupidHeight + 30;
-        }
         //left
         if (this.cupidX < -100) {
             this.cupidX = 700;
@@ -109,4 +102,6 @@ export default class Cupid {
             this.moveCupid("gravity");
         };
     };
+
+    
 };
