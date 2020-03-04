@@ -7,10 +7,9 @@ body {
   flex-direction: column;
   justify-content: center;
   background-image: linear-gradient(#c2c2f5, #eaeaf0);
-  height: 100%;
   background-repeat: none;
-  overflow: hidden;
   position: relative;
+  margin-bottom: 1200px;
 }
 
 h1 {
@@ -24,3 +23,4 @@ h1 {
   padding: 20px;
   text-shadow: -1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828;  
 }
+

@@ -1,6 +1,5 @@
 #canvas-background {
     width: 850px;
-    margin: 0 auto;
     align-self: center;
     top: 125%;
     background-image: url("../images/background.png");
@@ -8,6 +7,17 @@
     padding-right: 5px;
     padding-top: 8px;
     position: absolute;
+    z-index: 0;
+}
+
+#canvas-frame {
+    position: absolute;
+    align-self: center; 
+    top: 540%;
+    z-index: 10;
+    font-family: 'Megrim', cursive;
+    font-size: 35px; 
+    color: white; 
 }
 
 
@@ -20,18 +30,22 @@
     height: auto;
 }
 
-.instructions-visible {
+.instructions {
     margin: 0 auto;
     position: absolute; 
+    top: 220%;
     align-self: center;
-    top: 200%;
-    max-width: 50%;
+    text-align: center;
+    max-width: 70%;
     z-index: 1; 
-    font-size: 30px; 
     color: white;
-    display: block;
+    display: none;
+    font-family: 'MedievalSharp';
+    font-size: 65px; 
+    text-shadow: -1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828;  
+
 }
 
-.instructions-invisible {
-    display: none;
+.visible {
+    display: block;
 }
