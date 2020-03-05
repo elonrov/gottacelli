@@ -1,7 +1,7 @@
 #canvas-background {
     width: 850px;
     align-self: center;
-    top: 125%;
+    top: 135%;
     background-image: url("../images/background.png");
     background-size: cover;
     padding-right: 5px;
@@ -13,19 +13,18 @@
 #canvas-frame {
     position: absolute;
     align-self: center; 
-    top: 540%;
+    top: 535%;
     z-index: 10;
     font-family: 'Megrim', cursive;
     font-size: 35px; 
     color: white; 
 }
 
-
 .frame {
     position: absolute;
     margin: 0 auto;
     align-self: center;
-    top: 40%;
+    top: 64%;
     width: 1150px; 
     height: auto;
 }
@@ -42,10 +41,19 @@
     display: none;
     font-family: 'MedievalSharp';
     font-size: 65px; 
-    text-shadow: -1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828;  
+    text-shadow: -2px -2px 0 #292828, 2px -2px 0 #292828, -2px 2px 0 #292828, 2px 2px 0 #292828;  
+}
 
+.description {
+    padding-top: 20px;
+    font-size: 35px;
 }
 
 .visible {
     display: block;
 }
+
+.fade {
+    background-color: rgba(0, 0, 0, .9)
+}
+
