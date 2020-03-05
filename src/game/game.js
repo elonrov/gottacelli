@@ -144,7 +144,7 @@ export default class Game {
                 this.frameO = 0;
             }; 
 
-            if(this.frameC > 200) {
+            if(this.frameC > 175) {
                 this.clouds.push(new Cloud);
                 this.frameC = 0;
             }; 
@@ -170,21 +170,27 @@ export default class Game {
         this.ctxFrame.clearRect(0, 0, 900, 50);
         this.ctxFrame.fillStyle = ("White");
         this.ctxFrame.font = ("bolder 35px Arial");
+        // this.ctxFrame.strokeStyle("3", "black")
+        this.ctxFrame.lineWidth = 2.25;
         this.ctxFrame.fillText(`Score: ${this.cupid.score} | Health: `, 15, 35);
         this.ctxFrame.strokeText(`Score: ${this.cupid.score} | Health: `, 15, 35);
         this.ctxFrame.fillText(`High Score: ${this.highScore}`, 630, 32);
         this.ctxFrame.strokeText(`High Score: ${this.highScore}`, 630, 32);
+
     }
 
     drawHealthBar() {
         this.ctxFrame.beginPath(); 
-        this.ctxFrame.rect(310, 10, 200, 25); 
-        this.ctxFrame.fillStyle = "red";
+        this.ctxFrame.rect(322, 10, 200, 25); 
+        this.ctxFrame.strokeStyle = "#000000";
+        this.ctxFrame.strokeRect(322, 10, 200, 25);
+        this.ctxFrame.lineWidth = 2.25;
+        this.ctxFrame.fillStyle = "#e84625";
         this.ctxFrame.fill();
 
         this.ctxFrame.beginPath(); 
-        this.ctxFrame.rect(310, 10, this.cupid.health, 25); 
-        this.ctxFrame.fillStyle = "green"; 
+        this.ctxFrame.rect(322, 10, this.cupid.health, 25); 
+        this.ctxFrame.fillStyle = "#2c9926"; 
         this.ctxFrame.fill();
     }
     
