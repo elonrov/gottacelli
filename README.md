@@ -11,5 +11,7 @@ Gottacelli was built using JavaScript's CanvasJS charting library.
 
 | ![](src/readmeAssets/instructions.png) | ![](src/readmeAssets/gameplay.png) |
 |----------------------------------------|------------------------------------|
-|  ![](src/readmeAssets/gameplaygif.gif) |                                    |
+
+| ![](src/readmeAssets/gameplaygif.gif) |
+|---------------------------------------|
 
