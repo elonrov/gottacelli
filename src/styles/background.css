@@ -32,7 +32,7 @@
 .instructions {
     margin: 0 auto;
     position: absolute; 
-    top: 220%;
+    top: 200%;
     align-self: center;
     text-align: center;
     width: 70%;
@@ -45,6 +45,10 @@
     line-height: 1.5;
     font-size: 65px; 
     text-shadow: -3px -3px 0 #292828, 3px -3px 0 #292828, -3px 3px 0 #292828, 3px 3px 0 #292828;  
+}
+
+.smaller {
+    font-size: 25px;
 }
 
 .description {

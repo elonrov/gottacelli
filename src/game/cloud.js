@@ -1,3 +1,5 @@
+import Sound from "./sound";
+
 export default class Cloud {
   constructor(canvasWidth, canvasHeight) {
     const canvas = document.getElementById("canvas-background");
@@ -7,6 +9,7 @@ export default class Cloud {
 
     this.cloudWidth = 200;
     this.cloudHeight = 100;
+    this.sound = new Sound("src/sounds/thunder.mp3");
     
     this.cloudX = "";
     this.dir = Math.random() < 0.5 ? "left" : "right";
@@ -29,10 +32,8 @@ export default class Cloud {
 
   move(dir) {
     if (dir === "left") {
-      debugger
       this.cloudX -= 2;
     } else if (dir === "right") {
-      debugger
       this.cloudX += 2;
     }
   }

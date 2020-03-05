@@ -1,3 +1,4 @@
+import Sound from './sound';
 
 export default class Orange {
   constructor(canvasWidth, canvasHeight) {
@@ -8,13 +9,13 @@ export default class Orange {
     
     this.orangeWidth = 35;
     this.orangeHeight = 30;
-    
-    this.orangeX = Math.floor(Math.random() * Math.floor(750)); 
+    this.sound = new Sound("src/sounds/orange.mp3");
+
+    this.orangeX = Math.floor(Math.random() * Math.floor(720)); 
     this.orangeY = -15;
     this.now = 0;
-   
+
     this.drawOrange = this.drawOrange.bind(this);
-    this.clearOrange = this.clearOrange.bind(this);
   }
 
   drawOrange(ctx) {
@@ -27,10 +28,4 @@ export default class Orange {
   fall() {
     this.orangeY += 5;
   }
-
-  clearOrange() {
-    debugger
-    this.ctx.clearRect(this.orangeX, this.orangeY, (this.orangeX + this.orangeWidth), (this.orangeY + this.orangeHeight));
-  }
-
 }

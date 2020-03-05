@@ -10,19 +10,16 @@ export default class Game {
         this.cupid = new Cupid(this.canvasWidth, this.canvasHeight);
         
         this.playing = false;
+        this.soundOn = true;
         this.highScore = 0;
 
         this.oranges = [];
         let orange = new Orange;
         this.oranges.push(orange);
-
         this.clouds = [new Cloud, new Cloud];
-        // let cloud = new Cloud;
-        // this.clouds.push(cloud);
         
         this.frameO = 0;
         this.frameC = 0;        
-
         this.frameId = null;
 
         this.gameOver = this.gameOver.bind(this);
@@ -30,18 +27,16 @@ export default class Game {
         this.restartGame = this.restartGame.bind(this);
         this.endGame = this.endGame.bind(this);
 
-        this.detectOrangeCollision = this.detectOrangeCollision.bind(this);
-
         const frame = document.getElementById("canvas-frame");
         this.ctxFrame = frame.getContext("2d");
         this.drawFrameNav = this.drawFrameNav.bind(this);
         this.drawHealthBar = this.drawHealthBar.bind(this);
         this.updateFrameNav = this.updateFrameNav.bind(this);
 
-        document.addEventListener("keydown", this.startHandler(), false);
+        document.addEventListener("keydown", this.keyHandler(), false);
     };
 
-    startHandler() {
+    keyHandler() {
         const { restartGame } = this;
         return e => {
             e.preventDefault();
@@ -49,6 +44,8 @@ export default class Game {
                 console.log("enter");
                 this.playing = true;
                 restartGame();
+            } else if (e.key == "m") {
+                this.soundOn = !this.soundOn;
             }
         }
     };
@@ -96,7 +93,9 @@ export default class Game {
         const cupidRight = ((this.cupid.cupidX + this.cupid.cupidWidth));
         if (((orangeCenterX > cupidLeft) && (orangeCenterX < cupidRight)) && 
             ((orangeCenterY > cupidTop) && (orangeCenterY < cupidBottom))) {
-            // console.log("collision!")
+            if (this.soundOn) {
+                orange.sound.play();
+            }
             this.oranges.shift();
             this.cupid.score += 1;
             return true;
@@ -114,6 +113,9 @@ export default class Game {
         const cupidRight = ((this.cupid.cupidX + this.cupid.cupidWidth));
         if (((cloudCenterX > cupidLeft) && (cloudCenterX < cupidRight)) &&
             ((cloudCenterY > cupidTop) && (cloudCenterY < cupidBottom))) {
+            if (this.soundOn) {
+                cloud.sound.play();
+            };
             this.cupid.health -= 1.5;
         }; 
         if ((cloud.dir === "left") && (cloud.cloudX < -200)) {
@@ -170,12 +172,11 @@ export default class Game {
         this.ctxFrame.clearRect(0, 0, 900, 50);
         this.ctxFrame.fillStyle = ("White");
         this.ctxFrame.font = ("bolder 35px Arial");
-        // this.ctxFrame.strokeStyle("3", "black")
         this.ctxFrame.lineWidth = 2.25;
         this.ctxFrame.fillText(`Score: ${this.cupid.score} | Health: `, 15, 35);
         this.ctxFrame.strokeText(`Score: ${this.cupid.score} | Health: `, 15, 35);
-        this.ctxFrame.fillText(`High Score: ${this.highScore}`, 630, 32);
-        this.ctxFrame.strokeText(`High Score: ${this.highScore}`, 630, 32);
+        this.ctxFrame.fillText(`High Score: ${this.highScore}`, 645, 32);
+        this.ctxFrame.strokeText(`High Score: ${this.highScore}`, 645, 32);
 
     }
 
