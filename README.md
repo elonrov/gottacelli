@@ -1,18 +1,15 @@
-# Gottacelli
+# Gottacelli Botticelli
 
-Gottacelli is a game based on the painting "Primavera" by Sandro Botticelli. The gameplay is simple: 
-### A. Fly baby cupid through the grove to catch falling oranges before they hit the ground 
-* arrow keys 
-### B. Shoot heart arrows at the Graces when their hearts pulsate
-* space key 
-### C. Help Mercury keep away the oncoming winter clouds 
-* a typed command or something else-- any ideas?
+Gottacelli Botticelli is a game based on the painting "Primavera" by Sandro Botticelli. Fly cupid around the orange grove, avoiding the lingering winter clouds, being careful not to touch the ground, and catching as many falling oranges as possible. While Mercury fails to protect Flora from the winter chill, Cupid must help her make the most of the last days of spring.
 
-Other fun features could include commands or cursor interaction to make the Graces dance around, have Flora throw her flower petals, or change Venus' outfit. 
+Arrow keys to move, Enter to start, M to mute.  
 
-![](src/images/spring.png)
+Gottacelli was built using JavaScript's CanvasJS charting library. 
 
 
-# Wireframes 
+![](src/readmeAssets/title.png)
 
-![](src/images/wireframes.png)
+| ![](src/readmeAssets/instructions.png) | ![](src/readmeAssets/gameplay.png) |
+|----------------------------------------|------------------------------------|
+
+![](src/readmeAssets/gameplaygif.gif)
