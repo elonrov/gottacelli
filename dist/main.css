@@ -1,13 +1,12 @@
-html{min-height:100%;overflow:scroll}body{display:flex;flex-direction:column;justify-content:center;background-image:linear-gradient(#bbd9f5, #f5f6f7);background-repeat:none;position:relative;margin-bottom:900px}h1{margin:0 auto;font-family:"MedievalSharp";font-size:50px;color:goldenrod;margin-top:15px;margin-bottom:10px;letter-spacing:15px;padding-top:20px;text-shadow:-1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828}h3{margin:0 auto;font-family:"MedievalSharp";font-size:25px;color:goldenrod;margin-bottom:15px;letter-spacing:15px;padding:0;text-shadow:-1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828}.links{top:600%;position:absolute;align-self:center;font-family:'Poppins', sans-serif;display:flex;flex-direction:column}.a{text-decoration:none;color:#292828;padding:0px 10px 0px 10px;text-align:justify}.personal-links{align-self:center;align-items:center;margin:0 auto}.bott-links a,.personal-links a{align-self:center;margin:0 10px 20px 10px;text-decoration:none;color:#292828;text-align:justify}
+html{min-height:100%;overflow:scroll}body{display:flex;flex-direction:column;justify-content:center;background-image:linear-gradient(#bbd9f5, #f5f6f7);background-repeat:none;position:relative;margin-bottom:900px}h1{margin:0 auto;font-family:"MedievalSharp";font-size:50px;color:goldenrod;margin-top:15px;margin-bottom:10px;letter-spacing:15px;padding-top:20px;text-shadow:-1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828}h3{margin:0 auto;font-family:"MedievalSharp";font-size:25px;color:goldenrod;margin-bottom:15px;letter-spacing:15px;padding:0;text-shadow:-1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828}.links{top:630%;position:absolute;align-self:center;font-family:'Poppins', sans-serif;display:flex;flex-direction:column}.a{text-decoration:none;color:#292828;padding:0px 10px 0px 10px;text-align:justify}.personal-links{align-self:center;align-items:center;margin:0 auto}.bott-links a,.personal-links a{align-self:center;margin:0 10px 20px 10px;text-decoration:none;color:#292828;text-align:justify}
 
 #canvas-background {
-    width: 850px;
+    width: 855px;
+    height: 566px;
     align-self: center;
-    top: 135%;
+    top: 167%;
     background-image: url(images/background.png);
     background-size: cover;
-    padding-right: 5px;
-    padding-top: 8px;
     position: absolute;
     z-index: 0;
 }
@@ -15,26 +14,44 @@ html{min-height:100%;overflow:scroll}body{display:flex;flex-direction:column;jus
 #canvas-frame {
     position: absolute;
     align-self: center; 
-    top: 535%;
+    top: 575%;
     z-index: 10;
-    font-family: 'Megrim', cursive;
-    font-size: 35px; 
-    color: white; 
+}
+
+.game-stats {
+    position: absolute;
+    /* align-self: center;  */
+    top: 575%;
+    z-index: 11;
+    font-size: 40px;
+    color: white;
+    font-family: 'MedievalSharp', ;
+    text-shadow: -1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828;  
+}
+
+.score {
+    position: absolute;
+    right: 8%;
+}
+
+.health {
+    position: absolute;
+    right: 14%;
 }
 
 .frame {
     position: absolute;
     margin: 0 auto;
     align-self: center;
-    top: 64%;
-    width: 1150px; 
-    height: auto;
+    top: 102%;
+    width: 1035px; 
+    height: 748px;
 }
 
 .instructions {
     margin: 0 auto;
     position: absolute; 
-    top: 200%;
+    top: 220%;
     align-self: center;
     text-align: center;
     width: 70%;
