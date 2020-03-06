@@ -1,8 +1,3 @@
-// const CONSTANTS = {
-//     GRAVITY: 0.01,
-//     FLY_SPEED: 8, 
-//     MAX_VEL: 8
-// }
 
 
 export default class Cupid {
@@ -21,7 +16,7 @@ export default class Cupid {
         this.dirX = 0;
         this.dirY = 0;
 
-        this.health = 200;
+        this.health = 270;
         this.score = 0;
 
         this.imgSrc = "src/images/cupid-left.png";
@@ -57,30 +52,13 @@ export default class Cupid {
                 break;
             case "up":
                 this.dirY = -10;
-                break;
+                break
             case "gravity":
                 this.dirY = 4;
                 break;
         }
     };
-
-    newPos() {
-        this.cupidX += this.dirX;
-        this.cupidY += this.dirY;
-        this.detectBorders();
-    }
-
-    detectBorders() {
-        //left
-        if (this.cupidX < -100) {
-            this.cupidX = 700;
-        }
-        //right 
-        if (this.cupidX + this.cupidWidth > this.canvasWidth + 100) {
-            this.cupidX = -100;
-        }
-    }
-
+    
     keyDownHandler(e) {
         e.preventDefault();
         if (e.key == "Right" || e.key == "ArrowRight") {
@@ -103,5 +81,19 @@ export default class Cupid {
         };
     };
 
+    newPos() {
+        this.cupidX += this.dirX;
+        this.cupidY += this.dirY;
+        this.detectBorders();
+    };
+
+    detectBorders() {
+        if (this.cupidX < -100) {
+            this.cupidX = 700;
+        }
+        if (this.cupidX + this.cupidWidth > this.canvasWidth + 100) {
+            this.cupidX = -100;
+        }
+    };
     
 };

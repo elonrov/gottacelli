@@ -116,7 +116,7 @@ export default class Game {
             if (this.soundOn) {
                 cloud.sound.play();
             };
-            this.cupid.health -= 1.5;
+            this.cupid.health -= 1.7;
         }; 
         if ((cloud.dir === "left") && (cloud.cloudX < -200)) {
             this.clouds.shift(); 
@@ -171,26 +171,28 @@ export default class Game {
     drawFrameNav() {
         this.ctxFrame.clearRect(0, 0, 900, 50);
         this.ctxFrame.fillStyle = ("White");
-        this.ctxFrame.font = ("bolder 35px Arial");
-        this.ctxFrame.lineWidth = 2.25;
-        this.ctxFrame.fillText(`Score: ${this.cupid.score} | Health: `, 15, 35);
-        this.ctxFrame.strokeText(`Score: ${this.cupid.score} | Health: `, 15, 35);
-        this.ctxFrame.fillText(`High Score: ${this.highScore}`, 645, 32);
-        this.ctxFrame.strokeText(`High Score: ${this.highScore}`, 645, 32);
+        this.ctxFrame.font = ("bolder 38px Arial");
+        // this.ctxFrame.font = ("Arial");
+        this.ctxFrame.lineWidth = 2.5;
+        this.ctxFrame.strokeStyle = ("Black");
+        this.ctxFrame.fillText(`Score: ${this.cupid.score} | Health: `, 10, 35);
+        this.ctxFrame.strokeText(`Score: ${this.cupid.score} | Health: `, 10, 35);
+        this.ctxFrame.fillText(`High Score: ${this.highScore}`, 635, 32);
+        this.ctxFrame.strokeText(`High Score: ${this.highScore}`, 635, 32);
 
     }
 
     drawHealthBar() {
         this.ctxFrame.beginPath(); 
-        this.ctxFrame.rect(322, 10, 200, 25); 
+        this.ctxFrame.rect(345, 10, 270, 25); 
         this.ctxFrame.strokeStyle = "#000000";
-        this.ctxFrame.strokeRect(322, 10, 200, 25);
+        this.ctxFrame.strokeRect(345, 10, 270, 25);
         this.ctxFrame.lineWidth = 2.25;
         this.ctxFrame.fillStyle = "#e84625";
         this.ctxFrame.fill();
 
         this.ctxFrame.beginPath(); 
-        this.ctxFrame.rect(322, 10, this.cupid.health, 25); 
+        this.ctxFrame.rect(345, 10, this.cupid.health, 25); 
         this.ctxFrame.fillStyle = "#2c9926"; 
         this.ctxFrame.fill();
     }

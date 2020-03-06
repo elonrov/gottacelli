@@ -1,11 +1,10 @@
 #canvas-background {
-    width: 850px;
+    width: 855px;
+    height: 566px;
     align-self: center;
-    top: 135%;
+    top: 167%;
     background-image: url("../images/background.png");
     background-size: cover;
-    padding-right: 5px;
-    padding-top: 8px;
     position: absolute;
     z-index: 0;
 }
@@ -13,26 +12,44 @@
 #canvas-frame {
     position: absolute;
     align-self: center; 
-    top: 535%;
+    top: 575%;
     z-index: 10;
-    font-family: 'Megrim', cursive;
-    font-size: 35px; 
-    color: white; 
+}
+
+.game-stats {
+    position: absolute;
+    /* align-self: center;  */
+    top: 575%;
+    z-index: 11;
+    font-size: 40px;
+    color: white;
+    font-family: 'MedievalSharp', ;
+    text-shadow: -1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828;  
+}
+
+.score {
+    position: absolute;
+    right: 8%;
+}
+
+.health {
+    position: absolute;
+    right: 14%;
 }
 
 .frame {
     position: absolute;
     margin: 0 auto;
     align-self: center;
-    top: 64%;
-    width: 1150px; 
-    height: auto;
+    top: 102%;
+    width: 1035px; 
+    height: 748px;
 }
 
 .instructions {
     margin: 0 auto;
     position: absolute; 
-    top: 200%;
+    top: 220%;
     align-self: center;
     text-align: center;
     width: 70%;
