@@ -1,7 +1,4 @@
-html {
-  min-height: 100%;
-  overflow: scroll;
-}
+
 
 body {
   display: flex; 
@@ -37,8 +34,7 @@ h3 {
 }
 
 .links {
-  top: 630%;
-  position: absolute;
+  padding-top: 100px;
   align-self: center;
   font-family: 'Poppins', sans-serif;
   display: flex;
@@ -66,3 +62,4 @@ h3 {
   color: #292828;
   text-align: justify; 
 }
+

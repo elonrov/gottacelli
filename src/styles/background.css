@@ -2,7 +2,7 @@
     width: 855px;
     height: 566px;
     align-self: center;
-    top: 167%;
+    /* top: 167%; */
     background-image: url("../images/background.png");
     background-size: cover;
     position: absolute;
@@ -12,13 +12,12 @@
 #canvas-frame {
     position: absolute;
     align-self: center; 
-    top: 575%;
+    top: 84%;
     z-index: 10;
 }
 
-.game-stats {
-    position: absolute;
-    /* align-self: center;  */
+/* .game-stats { */
+    /* position: absolute;
     top: 575%;
     z-index: 11;
     font-size: 40px;
@@ -35,21 +34,21 @@
 .health {
     position: absolute;
     right: 14%;
-}
+} */
 
 .frame {
     position: absolute;
     margin: 0 auto;
     align-self: center;
-    top: 102%;
+    /* top: 102%; */
     width: 1035px; 
-    height: 748px;
+    height: 742px;
 }
 
 .instructions {
     margin: 0 auto;
     position: absolute; 
-    top: 220%;
+    /* top: 220%; */
     align-self: center;
     text-align: center;
     width: 70%;
@@ -57,7 +56,8 @@
     z-index: 1; 
     color: white;
     display: none;
-    font-family: 'Chakra Petch', sans-serif;
+    /* font-family: 'Chakra Petch', sans-serif; */
+    font-family: 'Work Sans', sans-serif;
     letter-spacing: 1px;
     line-height: 1.5;
     font-size: 65px; 
@@ -81,3 +81,113 @@
     background-color: rgba(0, 0, 0, .9)
 }
 
+.main {
+    display: grid; 
+    grid-template-columns: 8% 84% 8%;
+    padding-top: 80px;
+    /* justify-content: center; */
+}
+
+.game {
+    grid-column-start: 2; 
+    grid-column-end: 2;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.characters-1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  /* position: absolute;  */
+  display: flex;
+  flex-direction: column; 
+  /* left: 3%;  */
+  top: 150%;
+  height: 600px; 
+  justify-content: space-between;
+  /* align-items: flex-end; */
+  font-family: 'Work Sans', sans-serif;
+  z-index: 20;
+
+}
+
+.characters-2 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+  /* position: absolute;  */
+  display: flex; 
+  flex-direction: column; 
+  /* right: 3%;  */
+  /* top: 150%;
+  height: 600px;  */
+  /* align-items: center; */
+  align-items: left;
+  justify-content: space-between;
+  font-family: 'Work Sans', sans-serif;
+  z-index: 20;
+}
+
+.mercury, .graces, .venus, .flora, .chloris, .zephyrus {
+    position: relative; 
+    display: flex;
+    align-items: flex-end;
+}
+
+.mercury, .graces, .venus {
+    text-align: left;
+}
+
+.flora, .chloris, .zephyrus {
+    text-align: left;
+}
+
+.mercury > img, .graces > img, .venus > img, .flora > img, .chloris > img, .zephyrus > img {
+    /* position: absolute; */
+    position: relative;
+    height: 150px; 
+    width: auto;
+}
+
+.mercury > p, .graces > p, .venus > p, .flora > p, .chloris > p, .zephyrus > p {
+    opacity: 0;
+    position: absolute; 
+    width: 340px;
+    border: 5px double rgb(218, 153, 32);
+    border-radius: 2px;
+    box-shadow: 0px 0px 13px 6px rgba(255,255,255,1);
+    color: rgb(46, 46, 46);
+    z-index: 20;
+    padding: 7px;
+    background: #bbd9f5;
+}
+
+
+.mercury > p, .graces > p, .venus > p {
+    margin-left: 75px;
+    left: 50px;
+    position: absolute;
+    /* bottom: 10px; */
+}
+
+.flora > p, .chloris > p, .zephyrus > p {
+    margin-right: 75px;
+    right: 50px;
+    text-align: right;
+}
+
+/* .mercury > p, .flora > p {
+    top: 20px;
+} */
+
+/* .graces > p, .chloris > p {
+    /* bottom: -100px; */
+/* } */
+
+.venus > p, .zephyrus > p {
+    top: -30px;
+}
+
+.mercury:hover > p, .graces:hover > p, .venus:hover > p, .flora:hover > p, .chloris:hover > p, .zephyrus:hover > p {
+    opacity: 1;
+}

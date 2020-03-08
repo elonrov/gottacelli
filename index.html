@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=MedievalSharp|Megrim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Megrim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/main.css" />
     <title>Document</title>
   </head>
@@ -16,15 +16,53 @@
   <body>
     <h1>Gottacelli Botticelli</h1>
     <h3>by Elon Rov</h3>
-    <!-- <h5>about me | about "Primavera"</h5> -->
-    <canvas id="canvas-background" height="502" width="760"></canvas>
+    <div class="main">
+      <div class="characters-1">
+        <div  class="mercury"><img src="src/images/figures/mercury.png" height="150px">
+          <p>On the far left is Mercury, readily identifiable by his prominent winged sandals. He uses his staff to clear the clouds
+          from the sky and help Venus usher in the Spring. Mercury may have been modeled after Lorenzo de' Medici, who
+          commissioned the painting.
+            </p></div>
+        <div class="graces"><img src="src/images/figures/graces.png" height="150px">
+          <p>The Three Graces, a group of three sisters draped in diaphanous white, join hands in a dance. The graces are named
+          Pleasure, Chastity and Beauty, representing the pillars of ideal love. Ironically, it is Chastity who gazes longingly at Mercury, unaware of 
+          Cupid's arrow pointed right at her. 
+            </p></div>
+        <div class="venus"><img src="src/images/figures/venus.png" height="150px">
+          <p>In the center is the Roman goddess, Venus. She is depicted with her head tilted and gesturing to her right, her eyes
+          meeting the viewer’s. Above her is her son, Cupid, and behind him the tree limbs form an arch which frame Venus and
+          provide her with a privileged position in the painting. She presides over the blooming orange grove and brings forth
+          growth, fertility, and prosperity.
+            </p></div>
+      </div>
+      <div class="game">
+          <canvas id="canvas-background" height="502" width="760"></canvas>
+          <img class="frame" src="src/images/frame.png" />
+          <canvas id="canvas-frame" height="50" width="900"></canvas>
+      </div>
+      <div class="characters-2">
+        <div class="flora"><img src="src/images/figures/flora.png" height="150px">
+          <p>Flora is the goddess of spring, particularly of May flowers, and is depicted here as the personification of springtime.
+          There are at least 500 identified plant species depicted in the painting, with about 190 different flowers, of which at
+          least 130 can be specifically identified.
+            </p></div>
+        <div class="chloris"><img src="src/images/figures/chloris.png" height="150px">
+          <p>After marrying Zephyrus, Chloris the nymph transforms into Flora, the goddess of spring, flowers, and new growth. She is
+          depicted here with roses spilling out of her lips as she breathes. She is said to have been responsible for the
+          transformations of Adonis, Attis, Crocus, Hyacinthus and Narcissus into flowers.
+            </p></div>
+        <div class="zephyrus"><img src="src/images/figures/zephyrus.png" height="150px">
+          <p>On the far right is Zephyrus, representing the biting winds of March, the first of the spring winds. Above him, the
+          trees are bare and dark. After fighting with his brother over the nymph Chloris, Zephyrus kidnaps and possesses her. In
+          remorse, he later transforms her into a deity, giving her the domain of flowers.
+            </p></div>
+      </div>
+    </div>
+
+    <!-- <canvas id="canvas-background" height="502" width="760"></canvas>
     <img class="frame" src="src/images/frame.png"/>
-    <canvas id="canvas-frame" height="50" width ="900"></canvas>
-    <!-- <div class="game-stats">
-      <span class="score">Score: </span>
-      <span class="health">Health: </span>
-      <span class="high-score">High Score:</span>
-    </div> -->
+    <canvas id="canvas-frame" height="50" width ="900"></canvas> -->
+    
     <span id="instructions" class="instructions visible">
       <div>Press enter to start.</div>
       <div class="description">Arrow keys to move. Avoid the winter clouds and collect the dropping oranges. The floor isn't lava, but it'll kill you.<br><br><div class="smaller">Press "m" to (un)mute.</div></div>
