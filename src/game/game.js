@@ -41,7 +41,6 @@ export default class Game {
         return e => {
             e.preventDefault();
             if (e.key == "Enter") {
-                console.log("enter");
                 this.playing = true;
                 restartGame();
             } else if (e.key == "m") {
