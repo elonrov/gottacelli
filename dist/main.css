@@ -15,7 +15,7 @@ body{display:flex;flex-direction:column;justify-content:center;background-image:
     position: absolute;
     align-self: center; 
     top: 84%;
-    z-index: 10;
+    z-index: 20;
 }
 
 /* .game-stats { */
