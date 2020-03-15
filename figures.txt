@@ -1,0 +1,66 @@
+<div class="flora"><img src="src/images/figures/flora-frame.png" height="225px">
+          <p>Flora is the goddess of spring, particularly of May flowers, and is depicted here as the personification of springtime.
+          There are at least 500 identified plant species depicted in the painting, with about 190 different flowers, of which at
+          least 130 can be specifically identified.
+            </p></div>
+        <div class="chloris"><img src="src/images/figures/chloris-frame.png" height="225px">
+          <p>After marrying Zephyrus, Chloris the nymph transforms into Flora, the goddess of spring, flowers, and new growth. She is
+          depicted here with roses spilling out of her lips as she breathes. She is said to have been responsible for the
+          transformations of Adonis, Attis, Crocus, Hyacinthus and Narcissus into flowers.
+            </p></div>
+        <div class="zephyrus"><img src="src/images/figures/zephyrus-frame.png" height="225px">
+          <p>On the far right is Zephyrus, representing the biting winds of March, the first of the spring winds. Above him, the
+          trees are bare and dark. After fighting with his brother over the nymph Chloris, Zephyrus kidnaps and possesses her. In
+          remorse, he later transforms her into a deity, giving her the domain of flowers.
+            </p></div>
+      </div>
+
+      <div  class="mercury"><img src="src/images/figures/mercury-frame.png" height="225px">
+          <p>On the far left is Mercury, readily identifiable by his prominent winged sandals. He uses his staff to clear the clouds
+          from the sky and help Venus usher in the Spring. Mercury may have been modeled after Lorenzo de' Medici, who
+          commissioned the painting.
+            </p></div>
+        <div class="graces"><img src="src/images/figures/graces-frame.png" height="225px">
+          <p>The Three Graces, a group of three sisters draped in diaphanous white, join hands in a dance. The graces are named
+          Pleasure, Chastity and Beauty, representing the pillars of ideal love. Ironically, it is Chastity who gazes longingly at Mercury, unaware of 
+          Cupid's arrow pointed right at her. 
+            </p></div>
+        <div class="venus"><img src="src/images/figures/venus-frame.png" height="225px">
+          <p>In the center is the Roman goddess, Venus. She is depicted with her head tilted and gesturing to her right, her eyes
+          meeting the viewer’s. Above her is her son, Cupid, and behind him the tree limbs form an arch which frame Venus and
+          provide her with a privileged position in the painting. She presides over the blooming orange grove and brings forth
+          growth, fertility, and prosperity.
+            </p></div>
+
+
+            .flip-container {
+  perspective: 1000px;
+}
+
+  .flip-container:hover .flipper, .flip-container.hover .flipper   {
+    transform: rotateY(180deg);
+  }
+
+  .flip-container, .front, .back {
+    width: auto; 
+    height: 225px;
+  }
+  
+  .flipper {
+    transition: 2s; 
+    transform-style: preserve-3d; 
+    position: relative;
+  }
+  .front, .back {
+    backface-visibility: hidden; 
+    position: absolute;
+    top: 0; 
+    left: 0;
+  }
+  .front {
+    z-index: 2; 
+    transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(180deg);
+  }

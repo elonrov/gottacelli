@@ -29,8 +29,12 @@ export default class Game {
 
         const frame = document.getElementById("canvas-frame");
         this.ctxFrame = frame.getContext("2d");
-        this.drawFrameNav = this.drawFrameNav.bind(this);
+        this.scoreCount = document.getElementById("score");
+        this.highScoreCount = document.getElementById("high-score");
+        
         this.drawHealthBar = this.drawHealthBar.bind(this);
+        this.drawHealthBar();
+        this.updateScore = this.updateScore.bind(this);
         this.updateFrameNav = this.updateFrameNav.bind(this);
 
         document.addEventListener("keydown", this.keyHandler(), false);
@@ -51,8 +55,7 @@ export default class Game {
 
     endGame() {
         this.playing = false;
-        document.getElementById("instructions").classList.add("visible");
-        document.getElementById("canvas-background").classList.add("fade");
+        document.getElementById("welcome").classList.add("visible");
         this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
         this.cupid = new Cupid(this.canvasWidth, this.canvasHeight);
         
@@ -63,8 +66,7 @@ export default class Game {
         if (this.frameId) {
             cancelAnimationFrame(this.frameId)
         }
-        document.getElementById("instructions").classList.remove("visible");
-        document.getElementById("canvas-background").classList.remove("fade");
+        document.getElementById("welcome").classList.remove("visible");
 
         this.cupid.drawCupid(this.cupid.ctx);
         this.cupid.moveCupid("gravity");
@@ -77,7 +79,9 @@ export default class Game {
         if ((this.cupid.cupidY + this.cupid.cupidHeight - 30 > this.canvasHeight) || this.cupid.health < 0) {
             if (this.cupid.score > this.highScore) {
                 this.highScore = this.cupid.score;
+                this.highScoreCount.innerText = `High Score: ${this.highScore}`
             }
+            this.scoreCount.innerText = `Score: 0`;
             return true;
         }
         return false;
@@ -97,6 +101,7 @@ export default class Game {
             }
             this.oranges.shift();
             this.cupid.score += 1;
+            this.updateScore();
             return true;
         } else if (orangeCenterY > this.canvasHeight) {
             this.oranges.shift();
@@ -159,7 +164,6 @@ export default class Game {
             });
 
             if (this.gameOver()) {
-                console.log("Game Over! Play again.");
                 this.endGame();
             }
 
@@ -167,25 +171,25 @@ export default class Game {
         }
     }
 
-    drawFrameNav() {
-        this.ctxFrame.clearRect(0, 0, 900, 50);
-        this.ctxFrame.fillStyle = ("White");
-        this.ctxFrame.font = ("bolder 38px Arial");
-        // this.ctxFrame.font = ("Arial");
-        this.ctxFrame.lineWidth = 2.5;
-        this.ctxFrame.strokeStyle = ("Black");
-        this.ctxFrame.fillText(`Score: ${this.cupid.score} | Health: `, 10, 35);
-        this.ctxFrame.strokeText(`Score: ${this.cupid.score} | Health: `, 10, 35);
-        this.ctxFrame.fillText(`High Score: ${this.highScore}`, 635, 32);
-        this.ctxFrame.strokeText(`High Score: ${this.highScore}`, 635, 32);
-
+    updateScore() {
+        this.scoreCount.innerText = `Score: ${this.cupid.score}`;
     }
 
     drawHealthBar() {
+        //gradient not working
+        // let gradient = this.ctxFrame.createLinearGradient(0, 0, 170, 0); 
+        // gradient.addColorStop((this.cupid.health / 270), 'green'); 
+        // gradient.addColorStop(1, 'red'); 
+        // this.ctxFrame.fillStyle = gradient; 
+
+        // this.ctxFrame.fillRect(345, 10, 270, 25); 
+        // this.ctxFrame.fill();
+
+        //regular fill working
         this.ctxFrame.beginPath(); 
         this.ctxFrame.rect(345, 10, 270, 25); 
-        this.ctxFrame.strokeStyle = "#000000";
-        this.ctxFrame.strokeRect(345, 10, 270, 25);
+        // this.ctxFrame.strokeStyle = "#000000";
+        // this.ctxFrame.strokeRect(345, 10, 270, 25);
         this.ctxFrame.lineWidth = 2.25;
         this.ctxFrame.fillStyle = "#e84625";
         this.ctxFrame.fill();
@@ -197,7 +201,6 @@ export default class Game {
     }
     
     updateFrameNav() {
-        this.drawFrameNav();
         this.drawHealthBar();
         requestAnimationFrame(this.updateFrameNav);
     }

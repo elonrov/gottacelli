@@ -1,14 +1,14 @@
-#canvas-background {
+/* #canvas-background {
     width: 855px;
     height: 566px;
     align-self: center;
     /* top: 167%; */
-    background-image: url("../images/background.png");
+    /* background-image: url("../images/background.png");
     background-size: cover;
     position: absolute;
     z-index: 0;
-}
-
+} */
+/* 
 #canvas-frame {
     position: absolute;
     align-self: center; 
@@ -16,39 +16,27 @@
     z-index: 20;
 }
 
-/* .game-stats { */
-    /* position: absolute;
-    top: 575%;
-    z-index: 11;
-    font-size: 40px;
-    color: white;
-    font-family: 'MedievalSharp', ;
-    text-shadow: -1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828;  
+body {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(#bbd9f5, #f5f6f7);
+  background-repeat: none;
+  position: relative;
+  margin-bottom: 900px;
 }
-
-.score {
-    position: absolute;
-    right: 8%;
-}
-
-.health {
-    position: absolute;
-    right: 14%;
-} */
 
 .frame {
     position: absolute;
     margin: 0 auto;
     align-self: center;
-    /* top: 102%; */
     width: 1035px; 
     height: 742px;
 }
 
-.instructions {
+.welcome {
     margin: 0 auto;
     position: absolute; 
-    /* top: 220%; */
     align-self: center;
     text-align: center;
     width: 70%;
@@ -56,23 +44,13 @@
     z-index: 1; 
     color: white;
     display: none;
-    /* font-family: 'Chakra Petch', sans-serif; */
-    font-family: 'Work Sans', sans-serif;
     letter-spacing: 1px;
     line-height: 1.5;
-    font-size: 65px; 
-    text-shadow: -3px -3px 0 #292828, 3px -3px 0 #292828, -3px 3px 0 #292828, 3px 3px 0 #292828;  
-}
+    font-size: 40px; 
+    text-shadow: -3px -3px 0 #292828, 3px -3px 0 #292828, -3px 3px 0 #292828, 3px 3px 0 #292828; 
+} */
 
-.smaller {
-    font-size: 25px;
-}
-
-.description {
-    padding-top: 20px;
-    font-size: 35px;
-}
-
+/* 
 .visible {
     display: block;
 }
@@ -85,7 +63,6 @@
     display: grid; 
     grid-template-columns: 8% 84% 8%;
     padding-top: 80px;
-    /* justify-content: center; */
 }
 
 .game {
@@ -99,14 +76,11 @@
 .characters-1 {
     grid-column-start: 1;
     grid-column-end: 1;
-  /* position: absolute;  */
   display: flex;
   flex-direction: column; 
-  /* left: 3%;  */
   top: 150%;
   height: 600px; 
   justify-content: space-between;
-  /* align-items: flex-end; */
   font-family: 'Work Sans', sans-serif;
   z-index: 20;
 
@@ -115,13 +89,8 @@
 .characters-2 {
     grid-column-start: 3;
     grid-column-end: 3;
-  /* position: absolute;  */
   display: flex; 
   flex-direction: column; 
-  /* right: 3%;  */
-  /* top: 150%;
-  height: 600px;  */
-  /* align-items: center; */
   align-items: left;
   justify-content: space-between;
   font-family: 'Work Sans', sans-serif;
@@ -143,7 +112,6 @@
 }
 
 .mercury > img, .graces > img, .venus > img, .flora > img, .chloris > img, .zephyrus > img {
-    /* position: absolute; */
     position: relative;
     height: 150px; 
     width: auto;
@@ -167,7 +135,6 @@
     margin-left: 75px;
     left: 50px;
     position: absolute;
-    /* bottom: 10px; */
 }
 
 .flora > p, .chloris > p, .zephyrus > p {
@@ -175,19 +142,40 @@
     right: 50px;
     text-align: right;
 }
-
-/* .mercury > p, .flora > p {
-    top: 20px;
-} */
-
-/* .graces > p, .chloris > p {
-    /* bottom: -100px; */
-/* } */
-
 .venus > p, .zephyrus > p {
     top: -30px;
+} */
+
+/* .mercury:hover > p, .graces:hover > p, .venus:hover > p, .flora:hover > p, .chloris:hover > p, .zephyrus:hover > p {
+    opacity: 1;
+} */
+/* 
+.links {
+  padding-top: 100px;
+  align-self: center;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-.mercury:hover > p, .graces:hover > p, .venus:hover > p, .flora:hover > p, .chloris:hover > p, .zephyrus:hover > p {
-    opacity: 1;
+.a {
+  text-decoration: none; 
+  color: #292828;
+  padding: 0px 10px 0px 10px;
+  text-align: justify;
 }
+
+.personal-links {
+  align-self: center;
+  align-items: center;
+  margin: 0 auto;
+} */ 
+
+/* .bott-links a, .personal-links a { */
+  /* align-self: center;
+  margin: 0 10px 20px 10px;
+  text-decoration: none; 
+  color: #292828;
+  text-align: justify; 
+} */
+
