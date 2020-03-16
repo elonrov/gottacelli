@@ -176,6 +176,13 @@ body {
   transform: rotateY(180deg);
 }
 
+.figure-text {
+  position: absolute;
+  top: 0;
+  padding: 24px;
+  font-size: 14.5px;
+  color: #3b3b3b;
+}
 
 .links {
   padding-top: 30px;
