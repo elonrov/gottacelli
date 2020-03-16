@@ -1,16 +1,16 @@
-body{display:flex;flex-direction:column;justify-content:center;background-image:linear-gradient(#bbd9f5, #f5f6f7);background-repeat:none;position:relative;margin-bottom:900px}h1{margin:0 auto;font-family:"MedievalSharp";font-size:50px;color:goldenrod;margin-top:15px;margin-bottom:10px;letter-spacing:15px;padding-top:20px;text-shadow:-1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828}h3{margin:0 auto;font-family:"MedievalSharp";font-size:25px;color:goldenrod;margin-bottom:15px;letter-spacing:15px;padding:0;text-shadow:-1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828}.links{padding-top:100px;align-self:center;font-family:'Poppins', sans-serif;display:flex;flex-direction:column}.a{text-decoration:none;color:#292828;padding:0px 10px 0px 10px;text-align:justify}.personal-links{align-self:center;align-items:center;margin:0 auto}.bott-links a,.personal-links a{align-self:center;margin:0 10px 20px 10px;text-decoration:none;color:#292828;text-align:justify}
+.canvas-wrap{position:relative}#canvas-background{width:855px;height:566px;align-self:center;background-image:url(images/background.png);background-size:cover;z-index:0}.welcome{margin:0 auto;font-family:'MedievalSharp', cursive;position:absolute;align-self:center;text-align:center;z-index:1;color:white;display:none;letter-spacing:1px;line-height:1.5;font-size:30px;background-color:rgba(0,0,0,0.5);top:0;height:100%;width:100%;z-index:0}.welcome h1{font-size:70px;margin-bottom:0}.welcome h3{margin-top:0}.description{max-width:70%;margin:0 auto}.visible{display:block}#canvas-frame{position:absolute;align-self:center;bottom:25px;z-index:20}.score-bar{display:flex;flex-direction:row;font-family:'MedievalSharp', cursive;font-size:35px;color:white;width:100%;position:absolute;margin:0 auto;bottom:30px}#score{padding-left:100px}#health{padding-left:50px}#high-score{padding-left:340px}body{display:flex;flex-direction:column;justify-content:center;background-image:linear-gradient(#bbd9f5, #f5f6f7);background-repeat:none;position:relative}.frame{position:absolute;margin:0 auto;align-self:center;width:1035px;height:742px}.fade{background-color:rgba(0,0,0,0.9)}.main{display:grid;grid-template-columns:1fr 1055px 1fr;padding-top:80px}.game{grid-column-start:2;grid-column-end:2;display:flex;justify-content:center;align-items:center;position:relative}.characters-1{grid-column-start:1;grid-column-end:1;display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;font-family:'Work Sans', sans-serif;z-index:20}.characters-2{grid-column-start:3;grid-column-end:3;display:flex;flex-direction:column;align-items:left;justify-content:space-between;font-family:'Work Sans', sans-serif;z-index:20}.mercury,.graces,.venus,.flora,.chloris,.zephyrus{display:flex;align-items:flex-end}.flip-card{background-color:transparent;height:225px;width:158px;perspective:1000px;margin:15px 0px}.flip-card-inner{position:relative;width:auto;height:225px;text-align:center;transition:transform 0.8s;transform-style:preserve-3d}.flip-card:hover .flip-card-inner{transform:rotateY(180deg)}.front,.back{position:absolute;width:auto;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden}.back{transform:rotateY(180deg)}.links{padding-top:30px;align-self:center;font-family:'Poppins', sans-serif;display:flex;flex-direction:column}.a{text-decoration:none;color:#292828;padding:0px 10px 0px 10px;text-align:justify}.personal-links{align-self:center;align-items:center;margin:0 auto}.bott-links a,.personal-links a{align-self:center;margin:0 10px 20px 10px;text-decoration:none;color:#292828;text-align:justify}
 
-#canvas-background {
+/* #canvas-background {
     width: 855px;
     height: 566px;
     align-self: center;
     /* top: 167%; */
-    background-image: url(images/background.png);
+    /* background-image: url("../images/background.png");
     background-size: cover;
     position: absolute;
     z-index: 0;
-}
-
+} */
+/* 
 #canvas-frame {
     position: absolute;
     align-self: center; 
@@ -18,39 +18,27 @@ body{display:flex;flex-direction:column;justify-content:center;background-image:
     z-index: 20;
 }
 
-/* .game-stats { */
-    /* position: absolute;
-    top: 575%;
-    z-index: 11;
-    font-size: 40px;
-    color: white;
-    font-family: 'MedievalSharp', ;
-    text-shadow: -1px -1px 0 #292828, 1px -1px 0 #292828, -1px 1px 0 #292828, 1px 1px 0 #292828;  
+body {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(#bbd9f5, #f5f6f7);
+  background-repeat: none;
+  position: relative;
+  margin-bottom: 900px;
 }
-
-.score {
-    position: absolute;
-    right: 8%;
-}
-
-.health {
-    position: absolute;
-    right: 14%;
-} */
 
 .frame {
     position: absolute;
     margin: 0 auto;
     align-self: center;
-    /* top: 102%; */
     width: 1035px; 
     height: 742px;
 }
 
-.instructions {
+.welcome {
     margin: 0 auto;
     position: absolute; 
-    /* top: 220%; */
     align-self: center;
     text-align: center;
     width: 70%;
@@ -58,23 +46,13 @@ body{display:flex;flex-direction:column;justify-content:center;background-image:
     z-index: 1; 
     color: white;
     display: none;
-    /* font-family: 'Chakra Petch', sans-serif; */
-    font-family: 'Work Sans', sans-serif;
     letter-spacing: 1px;
     line-height: 1.5;
-    font-size: 65px; 
-    text-shadow: -3px -3px 0 #292828, 3px -3px 0 #292828, -3px 3px 0 #292828, 3px 3px 0 #292828;  
-}
+    font-size: 40px; 
+    text-shadow: -3px -3px 0 #292828, 3px -3px 0 #292828, -3px 3px 0 #292828, 3px 3px 0 #292828; 
+} */
 
-.smaller {
-    font-size: 25px;
-}
-
-.description {
-    padding-top: 20px;
-    font-size: 35px;
-}
-
+/* 
 .visible {
     display: block;
 }
@@ -87,7 +65,6 @@ body{display:flex;flex-direction:column;justify-content:center;background-image:
     display: grid; 
     grid-template-columns: 8% 84% 8%;
     padding-top: 80px;
-    /* justify-content: center; */
 }
 
 .game {
@@ -101,14 +78,11 @@ body{display:flex;flex-direction:column;justify-content:center;background-image:
 .characters-1 {
     grid-column-start: 1;
     grid-column-end: 1;
-  /* position: absolute;  */
   display: flex;
   flex-direction: column; 
-  /* left: 3%;  */
   top: 150%;
   height: 600px; 
   justify-content: space-between;
-  /* align-items: flex-end; */
   font-family: 'Work Sans', sans-serif;
   z-index: 20;
 
@@ -117,13 +91,8 @@ body{display:flex;flex-direction:column;justify-content:center;background-image:
 .characters-2 {
     grid-column-start: 3;
     grid-column-end: 3;
-  /* position: absolute;  */
   display: flex; 
   flex-direction: column; 
-  /* right: 3%;  */
-  /* top: 150%;
-  height: 600px;  */
-  /* align-items: center; */
   align-items: left;
   justify-content: space-between;
   font-family: 'Work Sans', sans-serif;
@@ -145,7 +114,6 @@ body{display:flex;flex-direction:column;justify-content:center;background-image:
 }
 
 .mercury > img, .graces > img, .venus > img, .flora > img, .chloris > img, .zephyrus > img {
-    /* position: absolute; */
     position: relative;
     height: 150px; 
     width: auto;
@@ -169,7 +137,6 @@ body{display:flex;flex-direction:column;justify-content:center;background-image:
     margin-left: 75px;
     left: 50px;
     position: absolute;
-    /* bottom: 10px; */
 }
 
 .flora > p, .chloris > p, .zephyrus > p {
@@ -177,22 +144,43 @@ body{display:flex;flex-direction:column;justify-content:center;background-image:
     right: 50px;
     text-align: right;
 }
-
-/* .mercury > p, .flora > p {
-    top: 20px;
-} */
-
-/* .graces > p, .chloris > p {
-    /* bottom: -100px; */
-/* } */
-
 .venus > p, .zephyrus > p {
     top: -30px;
+} */
+
+/* .mercury:hover > p, .graces:hover > p, .venus:hover > p, .flora:hover > p, .chloris:hover > p, .zephyrus:hover > p {
+    opacity: 1;
+} */
+/* 
+.links {
+  padding-top: 100px;
+  align-self: center;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-.mercury:hover > p, .graces:hover > p, .venus:hover > p, .flora:hover > p, .chloris:hover > p, .zephyrus:hover > p {
-    opacity: 1;
+.a {
+  text-decoration: none; 
+  color: #292828;
+  padding: 0px 10px 0px 10px;
+  text-align: justify;
 }
+
+.personal-links {
+  align-self: center;
+  align-items: center;
+  margin: 0 auto;
+} */ 
+
+/* .bott-links a, .personal-links a { */
+  /* align-self: center;
+  margin: 0 10px 20px 10px;
+  text-decoration: none; 
+  color: #292828;
+  text-align: justify; 
+} */
+
 
 
 /*# sourceMappingURL=main.css.map*/
