@@ -7,8 +7,8 @@ export default class Cloud {
     this.canvasWidth = canvasWidth;
     this.canvasHeight = canvasHeight;
 
-    this.cloudWidth = 200;
-    this.cloudHeight = 100;
+    this.cloudWidth = 170;
+    this.cloudHeight = 85;
     this.sound = new Sound("src/sounds/thunder.mp3");
     
     this.cloudX = "";

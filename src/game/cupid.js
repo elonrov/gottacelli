@@ -8,10 +8,10 @@ export default class Cupid {
         this.canvasWidth = canvasWidth;
         this.canvasHeight = canvasHeight;
 
-        this.cupidWidth = 150;
-        this.cupidHeight = 95;
+        this.cupidWidth = 128;
+        this.cupidHeight = 80.75;
 
-        this.cupidX = 300;
+        this.cupidX = 250;
         this.cupidY = 20;
         this.dirX = 0;
         this.dirY = 0;
@@ -89,10 +89,10 @@ export default class Cupid {
 
     detectBorders() {
         if (this.cupidX < -100) {
-            this.cupidX = 700;
+            this.cupidX = 600;
         }
         if (this.cupidX + this.cupidWidth > this.canvasWidth + 100) {
-            this.cupidX = -100;
+            this.cupidX = -50;
         }
     };
     

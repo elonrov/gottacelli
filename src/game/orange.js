@@ -7,8 +7,8 @@ export default class Orange {
     this.canvasWidth = canvasWidth;
     this.canvasHeight = canvasHeight; 
     
-    this.orangeWidth = 35;
-    this.orangeHeight = 30;
+    this.orangeWidth = 32;
+    this.orangeHeight = 27;
     this.sound = new Sound("src/sounds/orange.mp3");
 
     this.orangeX = Math.floor(Math.random() * Math.floor(720)); 
