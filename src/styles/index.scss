@@ -3,8 +3,8 @@
 }
 
 #canvas-background {
-    width: 855px;
-    height: 566px;
+    width: 727px;
+    height: 481px;
     align-self: center;
     background-image: url("../images/background.png");
     background-size: cover;
@@ -22,7 +22,7 @@
     display: none;
     letter-spacing: 1px;
     line-height: 1.5;
-    font-size: 30px; 
+    font-size: 25px; 
     background-color: rgba(0, 0, 0, .5);
     top: 0;
     height: 100%;
@@ -51,16 +51,16 @@
 
 #canvas-frame {
     position: absolute;
-    align-self: center; 
-    bottom: 25px;
+    bottom: 20px;
     z-index: 20;
+    padding-right: 140px;
 }
 
 .score-bar {
   display: flex; 
   flex-direction: row; 
   font-family: 'MedievalSharp', cursive;
-  font-size: 35px; 
+  font-size: 30px; 
   color: white;
   width: 100%; 
   position: absolute; 
@@ -69,15 +69,15 @@
 }
 
 #score {
-  padding-left: 100px;
+  padding-left: 155px;
 }
 
 #health {
-  padding-left: 50px;
+  padding-left: 45px;
 }
 
 #high-score {
-  padding-left: 340px;
+  padding-left: 300px;
 }
 
 body {
@@ -93,8 +93,8 @@ body {
     position: absolute;
     margin: 0 auto;
     align-self: center;
-    width: 1035px; 
-    height: 742px;
+    width: 880px; 
+    height: 631px;
 }
 
 .fade {
@@ -103,8 +103,9 @@ body {
 
 .main {
     display: grid; 
-    grid-template-columns: 1fr 1055px 1fr;
+    grid-template-columns: 1fr 920px 1fr;
     padding-top: 80px;
+    padding-bottom: 40px;
 }
 
 .game {
@@ -145,8 +146,8 @@ body {
 
 .flip-card {
   background-color: transparent; 
-  height: 225px; 
-  width: 158px; 
+  height: 191px; 
+  width: 134px; 
   perspective: 1000px;
   margin: 15px 0px;
 }
@@ -154,7 +155,7 @@ body {
 .flip-card-inner {
   position: relative; 
   width: auto; 
-  height: 225px; 
+  height: 191px; 
   text-align: center; 
   transition: transform 0.8s; 
   transform-style: preserve-3d;
@@ -180,16 +181,16 @@ body {
   position: absolute;
   top: 0;
   padding: 24px;
-  font-size: 14.5px;
+  font-size: 11.5px;
   color: #3b3b3b;
 }
 
 .g {
-  font-size: 14.3px;
+  font-size: 11.2px;
 }
 
 .links {
-  padding-top: 30px;
+  padding-bottom: 30px;
   align-self: center;
   font-family: 'Poppins', sans-serif;
   display: flex;
