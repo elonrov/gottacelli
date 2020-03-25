@@ -104,8 +104,7 @@ body {
 .main {
     display: grid; 
     grid-template-columns: 1fr 920px 1fr;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 10px;
 }
 
 .game {
@@ -190,7 +189,7 @@ body {
 }
 
 .links {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   align-self: center;
   font-family: 'Poppins', sans-serif;
   display: flex;
