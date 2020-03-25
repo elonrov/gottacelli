@@ -12,12 +12,12 @@ Gottacelli was built using JavaScript's CanvasJS charting library.
 Moving Cupid: 
 An event listener is set up for keydown and keyup on all four arrow keys. The image source is flipped from left-facing to right-facing depending on the direction the user wants to fly. 
 
+![](src/readmeAssets/gameplay.gif)
 
-| ![](src/readmeAssets/gameplay.gif) | ![](src/readmeAssets/movecupid.png) |
-|------------------------------------|-------------------------------------|
+![](src/readmeAssets/movecupid.png)
 
 Spinning 'museum panels': 
 The CSS transform property was used to rotate two images simultaneously on the Y-axis. The backface-visibility property is used to display the front or back of the card as the user hovers or un-hovers over the card.
 
-| ![](src/readmeAssets/cardflip.png) | ![](src/readmeAssets/transform.gif) |
+| ![](src/readmeAssets/cardflip2.png) | ![](src/readmeAssets/transform.gif) |
 |------------------------------------|-------------------------------------|
