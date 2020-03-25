@@ -11,7 +11,7 @@ export default class Orange {
     this.orangeHeight = 27;
     this.sound = new Sound("src/sounds/orange.mp3");
 
-    this.orangeX = Math.floor(Math.random() * Math.floor(650)); 
+    this.orangeX = Math.floor(Math.random() * Math.floor(630)); 
     this.orangeY = -15;
     this.now = 0;
 

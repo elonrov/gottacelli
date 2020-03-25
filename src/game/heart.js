@@ -11,7 +11,7 @@ export default class Heart {
     this.heartHeight = 35;
     this.sound = new Sound("src/sounds/heart.mp3");
 
-    this.heartX = Math.floor(Math.random() * Math.floor(650));
+    this.heartX = Math.floor(Math.random() * Math.floor(630));
     this.heartY = -15;
     this.now = 0;
 
