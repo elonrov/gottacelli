@@ -14,7 +14,7 @@ An event listener is set up for keydown and keyup on all four arrow keys. The im
 
 ![](src/readmeAssets/gameplay.gif)
 
-![](src/readmeAssets/movecupid.png)
+![](src/readmeAssets/movecupid2.png)
 
 Spinning 'museum panels': 
 The CSS transform property was used to rotate two images simultaneously on the Y-axis. The backface-visibility property is used to display the front or back of the card as the user hovers or un-hovers over the card.
