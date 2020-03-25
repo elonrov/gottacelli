@@ -1,6 +1,7 @@
 import Cupid from './cupid';
 import Orange from './orange';
 import Cloud from './cloud';
+import Heart from './heart';
 
 export default class Game {
     constructor(canvas) {
@@ -16,9 +17,13 @@ export default class Game {
         this.oranges = [];
         let orange = new Orange;
         this.oranges.push(orange);
+        this.hearts = []; 
+        let heart = new Heart; 
+        this.hearts.push(heart);
         this.clouds = [new Cloud, new Cloud];
         
         this.frameO = 0;
+        this.frameH = 0;
         this.frameC = 0;        
         this.frameId = null;
 
@@ -108,6 +113,26 @@ export default class Game {
         };
     }
 
+    detectHeartCollision(heart) {
+        const heartCenterX = ((heart.heartX + (heart.heartX + heart.heartWidth)) / 2);
+        const heartCenterY = ((heart.heartY + (heart.heartY + heart.heartHeight)) / 2);
+        const cupidTop = ((this.cupid.cupidY));
+        const cupidBottom = ((this.cupid.cupidY + this.cupid.cupidHeight));
+        const cupidLeft = ((this.cupid.cupidX));
+        const cupidRight = ((this.cupid.cupidX + this.cupid.cupidWidth));
+        if (((heartCenterX > cupidLeft) && (heartCenterX < cupidRight)) &&
+            ((heartCenterY > cupidTop) && (heartCenterY < cupidBottom))) {
+            if (this.soundOn) {
+                heart.sound.play();
+            }
+            this.hearts.shift();
+            this.cupid.score += 5;
+            this.updateScore();
+            return true;
+        } else if (heartCenterY > this.canvasHeight) {
+            this.hearts.shift();
+        };
+    }
     detectCloudCollision(cloud) {
         const cloudCenterX = ((cloud.cloudX + (cloud.cloudX + cloud.cloudWidth)) / 2);
         const cloudCenterY = ((cloud.cloudY + (cloud.cloudY + cloud.cloudHeight)) / 2);
@@ -135,10 +160,15 @@ export default class Game {
             this.cupid.drawCupid(this.ctx);
             
             this.frameO += 1;
+            this.frameH += 1;
             this.frameC += 1;
 
             this.oranges.forEach(orange => {
                 orange.drawOrange(this.ctx);
+            });
+
+            this.hearts.forEach(heart => {
+                heart.drawHeart(this.ctx);
             });
 
             this.clouds.forEach(cloud => {
@@ -150,6 +180,11 @@ export default class Game {
                 this.frameO = 0;
             }; 
 
+            if (this.frameH > 800) {
+                this.hearts.push(new Heart);
+                this.frameH = 0;
+            }
+
             if(this.frameC > 175) {
                 this.clouds.push(new Cloud);
                 this.frameC = 0;
@@ -158,6 +193,10 @@ export default class Game {
             this.oranges.forEach(orange => {
                 this.detectOrangeCollision(orange);
             });
+
+            this.hearts.forEach(heart => {
+                this.detectHeartCollision(heart);
+            })
 
             this.clouds.forEach(cloud => {
                 this.detectCloudCollision(cloud);
