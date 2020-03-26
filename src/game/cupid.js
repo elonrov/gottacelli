@@ -94,6 +94,9 @@ export default class Cupid {
         if (this.cupidX + this.cupidWidth > this.canvasWidth + 100) {
             this.cupidX = -50;
         }
+        if (this.cupidY < -100) {
+            this.cupidY = -90;
+        }
     };
     
 };
